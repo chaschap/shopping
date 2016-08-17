@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import {FriendComponent} from './friend.component';
+import {CurrentListComponent} from './current-list.component';
+
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
-  directives: [FriendComponent],
+  directives: [CurrentListComponent],
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  componentName: 'AppComponent';
+  title: any;
+  constructor(){
+    this.title = "Angular 2";
+  }
 }
